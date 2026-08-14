@@ -13,14 +13,19 @@ titleText:SetPoint("TOP", trackerFrame, "TOP", 0, -10)
 titleText:SetText("SessionTrack")
 
 local statusText = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-statusText:SetPoint("TOPLEFT", trackerFrame, "TOPLEFT", 5, -20 )
-statusText:SetText("Status:")
+statusText:SetPoint("TOPLEFT", trackerFrame, "TOPLEFT", 5, -10 )
+statusText:SetText("A/I:")
 
 local statusValue = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-statusValue:SetPoint("LEFT", statusText, "RIGHT", 0, 0)
+statusValue:SetPoint("LEFT", statusText, "RIGHT", 5, 0)
 statusValue:SetText("Inactive")
 
-local timeText
+local timeText = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+timeText:SetPoint("TOPLEFT", trackerFrame, "TOPLEFT", 5, -35)
+timeText:SetText("Session Time:")
 
 
-local timeValue
+
+local timeValue = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+timeValue:SetPoint("LEFT", timeText, "RIGHT", 5, 0)
+timeValue:SetText("12:00")
