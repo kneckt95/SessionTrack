@@ -21,7 +21,7 @@ statusValue:SetPoint("LEFT", statusText, "RIGHT", 5, 0)
 statusValue:SetText("Inactive")
 
 local timeText = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-timeText:SetPoint("TOPLEFT", trackerFrame, "TOPLEFT", 5, -35)
+timeText:SetPoint("LEFT", trackerFrame, "TOPLEFT", 5, -40)
 timeText:SetText("Session Time:")
 
 local timeValue = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
@@ -29,9 +29,17 @@ timeValue:SetPoint("LEFT", timeText, "RIGHT", 5, 0)
 timeValue:SetText("12:00")
 
 local goldPositiveLabel = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-goldPositiveLabel:SetPoint("TOPLEFT", trackerFrame, "TOPLEFT", 5, -60)
+goldPositiveLabel:SetPoint("LEFT", trackerFrame, "TOPLEFT", 5, -55)
 goldPositiveLabel:SetText("Gold Made:")
 
 local goldPositiveValue = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
 goldPositiveValue:SetPoint("LEFT", goldPositiveLabel, "RIGHT", 5, 0)
 goldPositiveValue:SetText("+69420 gold")
+
+local goldNegativeLabel = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+goldNegativeLabel:SetPoint("LEFT", trackerFrame, "TOPLEFT", 5, -70)
+goldNegativeLabel:SetText("Gold Spent:")
+
+local goldNegativeValue = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+goldNegativeValue:SetPoint("LEFT", goldNegativeLabel, "RIGHT", 5, 0)
+goldNegativeValue:SetText("-6969 gold")
