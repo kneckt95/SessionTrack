@@ -43,3 +43,11 @@ goldNegativeLabel:SetText("Gold Spent:")
 local goldNegativeValue = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
 goldNegativeValue:SetPoint("LEFT", goldNegativeLabel, "RIGHT", 5, 0)
 goldNegativeValue:SetText("-6969 gold")
+
+local DeathCountLabel = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+DeathCountLabel:SetPoint("LEFT", trackerFrame, "TOPLEFT", 5, -85)
+DeathCountLabel:SetText("Total Deaths:")
+
+local DeathCountValue= trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+DeathCountValue:SetPoint("LEFT", DeathCountLabel, "RIGHT", 5, 0)
+DeathCountValue:SetText("100")
