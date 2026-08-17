@@ -44,10 +44,36 @@ local goldNegativeValue = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFon
 goldNegativeValue:SetPoint("LEFT", goldNegativeLabel, "RIGHT", 5, 0)
 goldNegativeValue:SetText("-6969 gold")
 
-local DeathCountLabel = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-DeathCountLabel:SetPoint("LEFT", trackerFrame, "TOPLEFT", 5, -85)
-DeathCountLabel:SetText("Total Deaths:")
+local deathCountLabel = trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+deathCountLabel:SetPoint("LEFT", trackerFrame, "TOPLEFT", 5, -85)
+deathCountLabel:SetText("Total Deaths:")
 
-local DeathCountValue= trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-DeathCountValue:SetPoint("LEFT", DeathCountLabel, "RIGHT", 5, 0)
-DeathCountValue:SetText("100")
+local deathCountValue= trackerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+deathCountValue:SetPoint("LEFT", deathCountLabel, "RIGHT", 5, 0)
+deathCountValue:SetText("100")
+
+local sessionActive = false
+
+local function StartSession()
+
+sessionActive = true
+statusValue:SetText("Active")
+
+end
+
+local function EndSession()
+    
+    sessionActive = false
+    statusValue:SetText("Inactive")
+end
+
+SLASH_SESSIONTRACK1 = "/st"
+SlashCmdList["SESSIONTRACK"] = function(message)
+
+if message == "start" then
+    StartSession()
+else if message == "end" then
+    EndSession()
+end
+end
+end
